@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/contactsSlice';
+import { deleteContact } from 'redux/operations';
 import Notiflix from 'notiflix';
 
 const Contact = ({ contact }) => {
@@ -7,7 +7,7 @@ const Contact = ({ contact }) => {
 
   const handleDelete = () => {
     console.log(contact.id);
-    dispatch(deleteContact(contact));
+    dispatch(deleteContact(contact.id));
     Notiflix.Notify.warning(`Contact deleted`);
   };
 

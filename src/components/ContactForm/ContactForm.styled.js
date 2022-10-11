@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const ContactFormStyle = styled.div`
   display: block;
   text-align: center;
-  width: 100%;
+  width: auto;
   margin-bottom: 30px;
 `;
 export const Input = styled(Field)`

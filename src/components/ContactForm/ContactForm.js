@@ -2,8 +2,8 @@ import { Formik, ErrorMessage } from 'formik';
 import Notiflix from 'notiflix';
 import * as yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts } from 'redux/selectors';
-import { addContact } from 'redux/contactsSlice';
+import { selectContacts } from 'redux/selectors';
+import { addContact } from 'redux/operations';
 
 import {
   Input,
@@ -25,10 +25,11 @@ const initialValues = {
 };
 
 const ContactForm = () => {
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
   const handleSubmit = (value, { resetForm }) => {
+    console.log(value);
     if (
       contacts.find(
         contact => contact.name.toLowerCase() === value.name.toLowerCase()
@@ -44,10 +45,8 @@ const ContactForm = () => {
       resetForm();
       return;
     }
-    dispatch(addContact({ ...value }));
+    dispatch(addContact(value));
     Notiflix.Notify.success(`Contact added`);
-
-    console.log(value);
     resetForm();
   };
 

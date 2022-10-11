@@ -20,7 +20,7 @@ export const SectionBox = styled.div`
   border: 1px solid grey;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
   background-color: #00bcd405;
-  width: 480px;
+  width: auto;
 
   margin-left: auto;
   margin-right: auto;
