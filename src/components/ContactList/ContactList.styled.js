@@ -11,5 +11,5 @@ export const ListItem = styled.li`
   margin-bottom: 30px;
 `;
 export const ContactListBox = styled.div`
-  width: auto;
+  width: 480px;
 `;

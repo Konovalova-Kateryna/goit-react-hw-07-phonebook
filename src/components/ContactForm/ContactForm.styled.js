@@ -11,6 +11,7 @@ export const Input = styled(Field)`
   border-radius: 4px;
   padding: 5px;
   border: 2px solid rgba(33, 33, 33, 0.2);
+  margin-left: 30px;
   &:hover,
   &:active,
   &:focus-visible {
@@ -27,7 +28,7 @@ export const StyledForm = styled(Form)`
 `;
 export const Label = styled.label`
   font-size: 18px;
-  margin-right: 30px;
+
   display: flex;
   justify-content: space-between;
   align-items: baseline;
